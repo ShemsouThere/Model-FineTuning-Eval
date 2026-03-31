@@ -1,0 +1,3 @@
+huggingface_hub
+nltk<3.9
+sqlparse

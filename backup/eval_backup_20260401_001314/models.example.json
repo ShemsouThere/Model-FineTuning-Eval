@@ -1,0 +1,16 @@
+{
+  "models": [
+    {
+      "name": "qwen2.5-7b-instruct",
+      "path": "/absolute/path/to/Qwen2.5-7B-Instruct.gguf"
+    },
+    {
+      "name": "qwen2.5-coder-7b",
+      "path": "/absolute/path/to/Qwen2.5-Coder-7B.gguf"
+    },
+    {
+      "name": "deepseek-coder-6.7b",
+      "path": "/absolute/path/to/DeepSeek-Coder-6.7B.gguf"
+    }
+  ]
+}
