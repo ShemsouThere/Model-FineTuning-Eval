@@ -71,6 +71,13 @@ def resolve_base_file(repo_id: str, explicit_filename: str | None) -> str:
             f"Could not find a Q4_K_M GGUF file in {repo_id}. "
             "Pass --base-file explicitly."
         )
+    single_file_candidates = [
+        file_name
+        for file_name in candidates
+        if "-000" not in file_name.lower() and "-of-" not in file_name.lower()
+    ]
+    if len(single_file_candidates) == 1:
+        return single_file_candidates[0]
     raise RuntimeError(
         f"Found multiple Q4_K_M GGUF candidates in {repo_id}: {candidates}. "
         "Pass --base-file explicitly."
